@@ -1,0 +1,11 @@
+<nav>
+    <ul>
+        <li class="left"><a href="/">Home</a></li>
+        {% if user %}
+        <li><a href="#">Welcome {{ user }}</a></li>
+        <li><a href="/signout">Signout</a></li>
+        {% else %}
+        <li><a href="/signin">Sign in</a></li>
+        {% endif %}
+    </ul>
+</nav>
