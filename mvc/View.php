@@ -1,7 +1,8 @@
 <?php
 
-namespace CodeceptionTesting;
+namespace CodeceptionTesting\MVC;
 
+use CodeceptionTesting\Helper\Session;
 use Twig_Environment;
 use Twig_Extension_Debug;
 use Twig_Loader_Filesystem;

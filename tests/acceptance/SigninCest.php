@@ -8,7 +8,7 @@ class SigninCest
 {
     public function _before(AcceptanceTester $I)
     {
-        $this->users = include (__DIR__ . '/../../users.php');
+        $this->users = include (__DIR__ . '/../../fixtures/users.php');
     }
 
     public function _after(AcceptanceTester $I)

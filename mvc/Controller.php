@@ -1,8 +1,9 @@
 <?php
+namespace CodeceptionTesting\MVC;
 
-namespace CodeceptionTesting;
-
+use CodeceptionTesting\Helper\Session;
 use Symfony\Component\HttpFoundation\Request;
+
 
 class Controller {
     /**
@@ -30,7 +31,7 @@ class Controller {
             return ['error' => 'Username or password invalid.'];
         }
         
-        $users = include (__DIR__. '/users.php');
+        $users = include (FIXTURES_PATH . '/users.php');
         
         if (!in_array($username, array_keys($users))) {
             return ['error' => sprintf('Username %s does not exist.', $username)];

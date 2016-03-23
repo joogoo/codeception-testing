@@ -2,3 +2,11 @@ vendor/
 
 composer.lock
 tests/_output/*
+tests/_support/*
+tests/_bootstrap.php
+tests/_data/
+tests/acceptance/_bootstrap.php
+tests/acceptance.suite.yml
+tests/functional.suite.yml
+tests/unit.suite.yml
+codeception.yml

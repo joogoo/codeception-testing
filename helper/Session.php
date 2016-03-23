@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace CodeceptionTesting;
+namespace CodeceptionTesting\Helper;
 
 /**
  * Description of Session

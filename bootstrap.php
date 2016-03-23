@@ -2,15 +2,18 @@
 
 include __DIR__ . '/vendor/autoload.php';
 
-include_once __DIR__ . '/Controller.php';
-include_once __DIR__ . '/View.php';
-include_once __DIR__ . '/Session.php';
+define('PROJECT_PATH', __DIR__);
+define('TEMPLATE_PATH', PROJECT_PATH . '/templates');
+define('VIEW_CONTROLLER_PATH', PROJECT_PATH . '/mvc');
+define('FIXTURES_PATH', PROJECT_PATH . '/fixtures');
+define('HELPER_PATH', PROJECT_PATH . '/helper');
 
-define('TEMPLATE_PATH', __DIR__. '/templates');
+include_once VIEW_CONTROLLER_PATH . '/Controller.php';
+include_once VIEW_CONTROLLER_PATH . '/View.php';
+include_once HELPER_PATH . '/Session.php';
 
-
-use CodeceptionTesting\Controller;
-use CodeceptionTesting\View;
+use CodeceptionTesting\MVC\Controller;
+use CodeceptionTesting\MVC\View;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
