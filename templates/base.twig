@@ -3,10 +3,10 @@
         <style>
             body { margin:0 0 auto; }
             header { background: #f5f5f5; border-bottom: 1px solid lightgrey; margin-bottom: 30px; }
-            header nav ul { margin-top: 0; padding-top:0; padding: 1em; float:none; }
-            nav ul li { display:inline; list-style: none;  }
-            nav li.left { float:left; }
-            nav a { float:right; text-decoration: none; padding-left: 5px; }
+            header nav { padding:10px; }
+            header nav ul { margin: 10px; padding:0px; float:none;  display:-webkit-flex; display:flex; list-style-type:none; justify-content:flex-end; }
+            header nav li.left { margin-right:auto; }
+            nav a { float:right; text-decoration: none; padding-right: 20px; }
             section.main { width: 45%; margin: 0px auto; }
             form fieldset { width:350px; border:1px solid lightgrey; }
             form fieldset div { float:none; clear:both; }
@@ -31,9 +31,11 @@
             <article>
                 {% include 'login.twig' %}
             </article>
+            <article class="content">
+            </article>
         </section>
         {% if user %}
-            <script type="text/javascript" src="script.js"></script>
+            <script type="text/javascript" src="{{ app.asset_path }}/js/script.js"></script>
         {% endif %}
     </body>
 </html>

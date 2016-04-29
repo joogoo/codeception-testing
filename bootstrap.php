@@ -20,14 +20,25 @@ use Symfony\Component\HttpFoundation\Request;
 
 
 $app = new Application(); 
+/*$app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
+    $twig->addFunction(new \Twig_SimpleFunction('asset', function ($asset) use ($app) {
+        return sprintf('%s/%s',
+            $app['request']->getBasePath(),
+            ltrim($asset, '/')
+        );
+    }));
+
+    return $twig;
+}));*/
 
 /** Home page **/
-$app->get('/', function (Request $request) {
+$app->get('/', function (Request $request) use ($app) {
     $controller = new Controller($request);
     $view = new View('base');
     
     return $view->parse($controller->actionIndex());
 });
+
 $app->get('/signin', function (Request $request) {
     $controller = new Controller($request);
     $view = new View('base');

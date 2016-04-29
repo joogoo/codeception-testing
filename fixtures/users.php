@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'davert'     => 'qwerty',
+    'davert'   => 'qwerty',
+    'cratos'   => 'gow',
 ];
