@@ -8,7 +8,7 @@ class_name: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://localhost:8080
+            url: http://localhost:8888
 #        - WebDriver:
 #           url: 'http://localhost:8080/'
 #            browser: phantomjs
